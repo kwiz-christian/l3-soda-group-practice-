@@ -1,0 +1,112 @@
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+<style>
+    * {
+        font-family: sans-serif;
+    }
+
+    fieldset {
+        height: 500px;
+        width: 500px;
+        margin-left: 500px;
+        margin-top: 90px;
+
+    }
+
+    form {
+        height: 350px;
+        width: 400px;
+
+        margin-left: 35px;
+        border-radius: 12px;
+        box-shadow: rgb(83, 77, 77) 5px 5px 10px;
+    }
+
+    input {
+        width: 90%;
+        margin-left: 12px;
+        padding: 5px;
+    }
+
+    label {
+        margin-left: 12px;
+    }
+
+    h1,
+    p {
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    button {
+        width: 90%;
+        margin-left: 12px;
+        background-color: rgb(52, 140, 199);
+        padding: 6px;
+        border-radius: 5px;
+        border: hidden;
+        margin-top: 12px;
+    }
+
+    button:hover {
+        background: linear-gradient(to right, rgb(85, 85, 168), rgb(138, 82, 82), rgb(160, 152, 152), rgb(65, 62, 62));
+    }
+
+    .nn {
+        text-transform: none;
+    }
+
+    .top {
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        padding: 12px;
+        margin-left: 70px;
+        margin-right: 70px;
+
+    }
+
+    ::placeholder {
+        font-weight: bold;
+        opacity: 0.5;
+    }
+
+    img {
+        height: 70px;
+    }
+</style>
+
+<body>
+    <fieldset>
+        <div class="top">
+            <img src="Screenshot 2026-02-14 100000.png" alt="logo">
+            <h1>smis</h1>
+            <p class="nn">Stock envoy <br> Management System</p>
+        </div>
+        <form>
+            <h1>SIGN IN</h1>
+            <hr>
+            <label>Email adress</label>
+            <input type="email" placeholder="✉️ Enter your email" id="1" required>
+            <label>Password</label>
+            <input type="password" placeholder="🔒enter password" id="2" required>
+            <button onclick="login(event)">login</button>
+            <p>___________________________</p>
+            <p>Dont have account?<a href="register.html">sign up</a></p>
+
+        </form>
+    </fieldset>
+    <script>
+        function login(event) {
+            window.location.href = "dashboard.html"
+            const username = localStorage.getItem("username");
+            alert("welcome" + username)
+        }
+
+    </script>
+</body>
+
+</html>

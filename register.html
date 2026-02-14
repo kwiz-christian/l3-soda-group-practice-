@@ -1,0 +1,117 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>register</title>
+</head>
+<style>
+    *{
+        font-family: Arial;
+    }
+
+    fieldset {
+        height: 700px;
+        width: 500px;
+        margin-left: 500px;
+        margin-top: 90px;
+
+    }
+
+    form {
+        height: 450px;
+        width: 400px;
+        margin-left: 35px;
+        border-radius: 12px;
+        box-shadow: rgb(83, 77, 77) 5px 5px 10px;
+    }
+
+    input {
+        width: 90%;
+        margin-left: 12px;
+        padding: 5px;
+    }
+
+    label {
+        margin-left: 12px;
+    }
+
+    h1,
+    p {
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    button {
+        width: 90%;
+        margin-left: 12px;
+        background-color: rgb(52, 140, 199);
+        padding: 6px;
+        border-radius: 5px;
+        border: hidden;
+        margin-top: 12px;
+    }
+
+    .nn {
+        text-transform: none;
+    }
+
+    .top {
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        padding: 12px;
+        margin-left: 70px;
+        margin-right: 70px;
+    }
+
+    ::placeholder {
+        font-weight: bold;
+        opacity: 0.5;
+    }
+
+    img {
+        height: 70px;
+    }
+</style>
+
+<body>
+    <fieldset>
+        <div class="top">
+            <img src="Screenshot 2026-02-14 100000.png" alt="logo">
+            <h1>smis</h1>
+
+            <p class="nn">Stock envoy <br> Management System</p>
+        </div>
+        <form onsubmit="register(event)">
+
+            <h1>Create account</h1>
+            <p>_________________________________________</p>
+            <hr>
+            <label>Full names</label>
+            <input type="text" placeholder="👤full names" required id="name">
+            <label>Email</label>
+            <input type="email" placeholder="📧 full email" required>
+            <label>Password</label>
+            <input type="password" placeholder="🔐 password " id="password" required>
+            <label>confirm password</label>
+            <input type="password" placeholder="🔐confirm password" required>
+            <button onclick="register(event)">Create account</button>
+            <p>___________________________</p>
+            <p class="nn">Already have account?<a href="login.html">login</a> </p>
+            <div id="warn"></div>
+        </form>
+
+    </fieldset>
+    <script>
+        function register(event) {
+            const username = document.getElementById("name").value;
+            localStorage.setItem("username", username);
+            alert("Acount creation succes✅✅✅" + username);
+            window.location.href = "dashboard.html"
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,106 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+    }
+
+    header {
+        background-color: white;
+        padding: 8px;
+        margin: 0;
+        display: flex;
+justify-content: space-between;
+    }
+
+    .divis {
+        display: flex;
+        flex-direction: column;
+        margin-left: 10px;
+    }
+
+    aside {
+
+        background-color: rgb(3, 21, 48);
+        padding: 40px;
+        color: white;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    main {
+        background-color: aliceblue;
+        height: 570px;
+        width: 100%;
+    }
+
+    div {
+        display: flex;
+
+    }
+
+    .ad {
+        margin-left: 1040px;
+        height: 40px;
+        width: 40px;
+        box-shadow: yellow 5px 5px 5px 5px;
+    }
+
+    img {
+        height: 40px;
+        width: 40px;
+    }
+
+    .menus {
+        padding: 20px;
+        text-decoration: none;
+        color: white;
+    }
+
+    .result {
+        color: black;
+       
+    }
+</style>
+
+<body>
+    <header>
+
+        <div>
+            <img src="new icon.png" alt="logo">
+        </div>
+        <div class="divis">
+            <h1>SIMS</h1>
+            <p>Stock Envoy Management System</p>
+        </div>
+
+
+        <div>
+            <div id="result"></div>
+            <a href="login.html"><img src="another.png" alt="log out" class="ad"></a>
+        </div>
+
+    </header>
+    <div>
+        <aside>
+            <a class="menus" href="#"> Dashboard</a>
+            <a class="menus" href="#">Products</a>
+            <a class="menus" href="#">Reports</a>
+            <a class="menus" href="#">setting</a>
+        </aside>
+        <main>fufgwyebufj</main>
+    </div>
+    <script>
+        const username = localStorage.getItem("username");
+        document.getElementById("result").innerHTML = "welcome" + username;
+
+    </script>
+</body>
+
+</html>
