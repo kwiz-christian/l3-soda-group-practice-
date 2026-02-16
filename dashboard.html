@@ -1,104 +1,67 @@
 <html lang="en">
-
-<head>
+    <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <style>
-    * {
+    body{
         margin: 0;
     }
-
-    header {
-        background-color: white;
-        padding: 8px;
-        margin: 0;
+    .all{
         display: flex;
-justify-content: space-between;
     }
-
-    .divis {
+    img{
+        height: 100px;
+    }
+    header{
         display: flex;
-        flex-direction: column;
-        margin-left: 10px;
-    }
-
-    aside {
-
-        background-color: rgb(3, 21, 48);
-        padding: 40px;
-        color: white;
-        display: flex;
-        flex-direction: column;
-
-    }
-
-    main {
+        justify-content: space-between;
         background-color: aliceblue;
-        height: 570px;
-        width: 100%;
     }
+    button{
+        background-color: rgb(22, 119, 175);
+        height: 50px;
 
-    div {
+    }
+    .body{
         display: flex;
+    }
+    aside{
+        background-color: red;
+        width: 200px;
+       height: 100%;
 
     }
-
-    .ad {
-        margin-left: 1040px;
-        height: 40px;
-        width: 40px;
-        box-shadow: yellow 5px 5px 5px 5px;
-    }
-
-    img {
-        height: 40px;
-        width: 40px;
-    }
-
-    .menus {
-        padding: 20px;
-        text-decoration: none;
-        color: white;
-    }
-
-    .result {
-        color: black;
-       
+    main{
+        background-color: blueviolet;
+        width: 100;
     }
 </style>
 
 <body>
     <header>
-
-        <div>
-            <img src="new icon.png" alt="logo">
+        <div class="all">
+            <img src="1.png" alt="logo">
+            <div class="text">
+                 <h1>SMIS</h1>
+            <P>Stock Envoy Management System</P>
+            </div>           
         </div>
-        <div class="divis">
-            <h1>SIMS</h1>
-            <p>Stock Envoy Management System</p>
+        <div class="username" id="username">
+
         </div>
-
-
-        <div>
-            <div id="result"></div>
-            <a href="login.html"><img src="another.png" alt="log out" class="ad"></a>
-        </div>
-
+     <button>log out</button>
     </header>
-    <div>
-        <aside>
-            <a class="menus" href="#"> Dashboard</a>
-            <a class="menus" href="#">Products</a>
-            <a class="menus" href="#">Reports</a>
-            <a class="menus" href="#">setting</a>
+    <div class="body">
+        <aside>l
+
         </aside>
-        <main>fufgwyebufj</main>
+        <main>tgkl4g</main>
     </div>
     <script>
-        const username = localStorage.getItem("username");
-        document.getElementById("result").innerHTML = "welcome" + username;
+           const username = localStorage.getItem("username");
+            document.getElementById("username").innerHTML = "welcome" + username;
 
     </script>
 </body>
