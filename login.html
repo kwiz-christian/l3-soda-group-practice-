@@ -2,16 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SMIS Login</title>
+    <title>SIMS Login</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <fieldset class="reg">
         <div class="out">
             <img src="Screenshot 2040-01-01 061859.png" alt="logo">
-            <h1>SMIS</h1>
-            <p>Stock Envoy <br> Management System</p>
+            <h1>SIMS</h1>
+            <p>Stock Inventory <br> Management System</p>
         </div>
 
         <form class="reg1" onsubmit="login(event)">
@@ -22,6 +21,7 @@
             <label>Password</label>
             <input type="password" placeholder="🔒 enter your password" id="password2">
             <button type="submit">Login</button>
+            <p id="loginMessage"></p>
             <p>Don't have an account? <a href="register.html">Sign Up</a></p>
         </form>
     </fieldset>
